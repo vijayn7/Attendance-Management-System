@@ -1,7 +1,7 @@
 package com.example.attendance.members;
 import java.util.Objects;
 
-public class Faculty extends member{
+public class Faculty extends Member{
     private String department;
     private double salary;
 
