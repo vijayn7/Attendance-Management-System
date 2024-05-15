@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+
 import com.example.attendance.members.Faculty;
 import com.example.attendance.members.interfaces.FacultyDAO;
 
