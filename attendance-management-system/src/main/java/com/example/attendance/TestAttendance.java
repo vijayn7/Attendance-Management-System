@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import com.example.attendance.members.Student;
 import com.example.attendance.members.Faculty;
-import com.example.attendance.members.member;
+import com.example.attendance.members.Member;
 
 import static org.junit.Assert.*;
 
@@ -69,8 +69,8 @@ public class TestAttendance {
 
     @Test
     public void testMember() {
-        member member1 = new member(1, "John", "john@example.com", 10);
-        member member2 = new member(2, "Alice", "alice@example.com", 8);
+        Member member1 = new Member(1, "John", "john@example.com", 10);
+        Member member2 = new Member(2, "Alice", "alice@example.com", 8);
 
         // Test getters
         assertEquals(1, member1.getId());

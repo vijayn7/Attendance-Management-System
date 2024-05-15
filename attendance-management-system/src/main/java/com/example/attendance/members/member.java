@@ -1,13 +1,13 @@
 package com.example.attendance.members;
 import java.util.Objects;
 
-public class member {
+public class Member {
     private int id;
     private String name;
     private String email;
     private int attendance;
 
-    public member(int id, String name, String email, int attendance) {
+    public Member(int id, String name, String email, int attendance) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -25,7 +25,7 @@ public class member {
         attendance++;
     }
 
-    public member attendance(int attendance) {
+    public Member attendance(int attendance) {
         setAttendance(attendance);
         return this;
     }
@@ -54,17 +54,17 @@ public class member {
         this.email = email;
     }
 
-    public member id(int id) {
+    public Member id(int id) {
         setId(id);
         return this;
     }
 
-    public member name(String name) {
+    public Member name(String name) {
         setName(name);
         return this;
     }
 
-    public member email(String email) {
+    public Member email(String email) {
         setEmail(email);
         return this;
     }
@@ -73,10 +73,10 @@ public class member {
     public boolean equals(Object o) {
         if (o == this)
             return true;
-        if (!(o instanceof member)) {
+        if (!(o instanceof Member)) {
             return false;
         }
-        member member = (member) o;
+        Member member = (Member) o;
         return id == member.id && Objects.equals(name, member.name) && Objects.equals(email, member.email);
     }
 
