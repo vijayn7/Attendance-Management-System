@@ -98,7 +98,7 @@ public class member {
             " id='" + getId() + "'" +
             ", name='" + getName() + "'" +
             ", email='" + getEmail() + "'" +
-            ", attendance='" + getAttendance() + "\n";
+            ", attendance='" + getAttendance() + "'}\n";
     }
     
 }
