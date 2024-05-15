@@ -1,14 +1,19 @@
 package com.example.attendance;
 
 import org.junit.Test;
+
+import com.example.attendance.members.Student;
+import com.example.attendance.members.Faculty;
+import com.example.attendance.members.member;
+
 import static org.junit.Assert.*;
 
 public class TestAttendance {
 
     @Test
     public void testStudent() {
-        student student1 = new student(1, "John", "john@example.com", 10, 3, 1000.0);
-        student student2 = new student(2, "Alice", "alice@example.com", 8, 4, 1500.0);
+        Student student1 = new Student(1, "John", "john@example.com", 10, 3, 1000.0);
+        Student student2 = new Student(2, "Alice", "alice@example.com", 8, 4, 1500.0);
 
         // Test getters
         assertEquals(1, student1.getId());
@@ -36,20 +41,20 @@ public class TestAttendance {
 
     @Test
     public void testFaculty() {
-        faculty faculty1 = new faculty(1, "Dr. Smith", "smith@example.com", 20, faculty.departments.TEACHING, 5000.0);
-        faculty faculty2 = new faculty(2, "Dr. Brown", "brown@example.com", 18, faculty.departments.ADMINISTRATION, 6000.0);
+        Faculty faculty1 = new Faculty(1, "Dr. Smith", "smith@example.com", 20, "TEACHING" , 5000.0);
+        Faculty faculty2 = new Faculty(2, "Dr. Brown", "brown@example.com", 18, "ADMINISTRATION", 6000.0);
 
         // Test getters
         assertEquals(1, faculty1.getId());
         assertEquals("Dr. Smith", faculty1.getName());
         assertEquals("smith@example.com", faculty1.getEmail());
         assertEquals(20, faculty1.getAttendance());
-        assertEquals(faculty.departments.TEACHING, faculty1.getDepartment());
+        assertEquals("TEACHING", faculty1.getDepartment());
         assertEquals(5000.0, faculty1.getSalary(), 0.01);
 
         // Test setters
-        faculty1.setDepartment(faculty.departments.ADMINISTRATION);
-        assertEquals(faculty.departments.ADMINISTRATION, faculty1.getDepartment());
+        faculty1.setDepartment("ADMINISTRATION");
+        assertEquals("ADMINISTRATION", faculty1.getDepartment());
 
         faculty1.setSalary(5500.0);
         assertEquals(5500.0, faculty1.getSalary(), 0.01);

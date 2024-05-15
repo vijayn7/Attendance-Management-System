@@ -1,4 +1,4 @@
-package com.example.attendance;
+package com.example.attendance.members;
 import java.util.Objects;
 
 public class member {

@@ -1,22 +1,21 @@
-package com.example.attendance;
+package com.example.attendance.members;
 import java.util.Objects;
 
-public class faculty extends member{
-    public enum departments {TEACHING, ADMINISTRATION, ATHLETICS, OTHER}
-    private departments department;
+public class Faculty extends member{
+    private String department;
     private double salary;
 
-    public faculty(int id, String name, String email, int attendance, departments department, double salary) {
+    public Faculty(int id, String name, String email, int attendance, String department, double salary) {
         super(id, name, email, attendance);
         this.department = department;
         this.salary = salary;
     }
 
-    public departments getDepartment() {
+    public String getDepartment() {
         return this.department;
     }
 
-    public void setDepartment(departments department) {
+    public void setDepartment(String department) {
         this.department = department;
     }
 
@@ -28,12 +27,12 @@ public class faculty extends member{
         this.salary = salary;
     }
 
-    public faculty department(departments department) {
+    public Faculty department(String department) {
         setDepartment(department);
         return this;
     }
 
-    public faculty salary(double salary) {
+    public Faculty salary(double salary) {
         setSalary(salary);
         return this;
     }
@@ -42,10 +41,10 @@ public class faculty extends member{
     public boolean equals(Object o) {
         if (o == this)
             return true;
-        if (!(o instanceof faculty)) {
+        if (!(o instanceof Faculty)) {
             return false;
         }
-        faculty faculty = (faculty) o;
+        Faculty faculty = (Faculty) o;
         return Objects.equals(department, faculty.department) && salary == faculty.salary && super.equals(o);
     }
 

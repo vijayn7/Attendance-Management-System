@@ -1,12 +1,12 @@
-package com.example.attendance;
+package com.example.attendance.members;
 import java.util.Objects;
 
-public class student extends member {
+public class Student extends member {
     private int gpa;
     private double accountBalance;
     private String role = "Student";
 
-    public student(int id, String name, String email, int attendance, int gpa, double accountBalance) {
+    public Student(int id, String name, String email, int attendance, int gpa, double accountBalance) {
         super(id, name, email, attendance);
         this.gpa = gpa;
         this.accountBalance = accountBalance;
@@ -32,12 +32,12 @@ public class student extends member {
         return role;
     }
 
-    public student gpa(int gpa) {
+    public Student gpa(int gpa) {
         setGpa(gpa);
         return this;
     }
 
-    public student accountBalance(double accountBalance) {
+    public Student accountBalance(double accountBalance) {
         setAccountBalance(accountBalance);
         return this;
     }
@@ -46,10 +46,10 @@ public class student extends member {
     public boolean equals(Object o) {
         if (o == this)
             return true;
-        if (!(o instanceof student)) {
+        if (!(o instanceof Student)) {
             return false;
         }
-        student student = (student) o;
+        Student student = (Student) o;
         return gpa == student.gpa && accountBalance == student.accountBalance && role == student.role && super.equals(o);
     }
 
