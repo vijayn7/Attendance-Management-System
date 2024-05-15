@@ -14,13 +14,6 @@ public class member {
         this.attendance = attendance;
     }
 
-    public member(int id, String name, String email) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        attendance = 0;
-    }
-
     public int getAttendance() {
         return this.attendance;
     }
