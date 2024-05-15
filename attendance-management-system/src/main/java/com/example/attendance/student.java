@@ -63,7 +63,7 @@ public class student extends member {
         return "{" +
             " gpa='" + getGpa() + "'" +
             ", accountBalance='" + getAccountBalance() + "'" +
-            ", role=' " + getRole() + "'" + 
+            ", role='" + getRole() + "'," + 
             super.toString();
     }
     

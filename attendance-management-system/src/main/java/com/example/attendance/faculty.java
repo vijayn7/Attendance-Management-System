@@ -58,7 +58,7 @@ public class faculty extends member{
     public String toString() {
         return "{" +
             " department='" + getDepartment() + "'" +
-            ", salary='" + getSalary() + "'" +
+            ", salary='" + getSalary() + "'," +
             super.toString();
     }
 }
