@@ -24,7 +24,7 @@ public class main {
          // Database connection parameters
         String jdbcUrl = "jdbc:mysql://localhost:3306/attendancemanagementsystem";
         String username = "root";
-        String password = "Vimaya123!";
+        String password = "password";
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
