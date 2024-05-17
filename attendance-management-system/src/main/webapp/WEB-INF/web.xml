@@ -3,5 +3,17 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
+    <display-name>Archetype Created Web Application</display-name>
+    
+    <!-- Define the servlet -->
+    <servlet>
+        <servlet-name>AddStudentServlet</servlet-name>
+        <servlet-class>com.example.attendance.servlets.AddStudentServlet</servlet-class>
+    </servlet>
+    
+    <!-- Map the servlet to a URL pattern -->
+    <servlet-mapping>
+        <servlet-name>AddStudentServlet</servlet-name>
+        <url-pattern>/attendance-management-system/addStudent</url-pattern>
+    </servlet-mapping>
 </web-app>

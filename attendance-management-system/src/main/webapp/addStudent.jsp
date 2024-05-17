@@ -11,7 +11,7 @@
 </head>
 <body>
     <h1>Add New Student</h1>
-    <form action="addStudent" method="post">
+    <form action="AddStudentServlet" method="post">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required><br><br>
         
